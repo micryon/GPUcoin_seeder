@@ -342,13 +342,13 @@ extern "C" void* ThreadStats(void*) {
   } while(1);
 }
 
-static const string mainnet_seeds[] = {"dnsseed.litecointools.com", "dnsseed.litecoinpool.org", "dnsseed.ltc.xurious.com", ""};
-static const string testnet_seeds[] = {"testnet-seed.litecointools.com", ""};
+static const string mainnet_seeds[] = {"dnsseed.realstackcointools.com", "dnsseed.realstackcoinpool.org", "dnsseed.ltc.xurious.com", ""};
+static const string testnet_seeds[] = {"testnet-seed.realstackcointools.com", ""};
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
   if (!fTestNet){
-    db.Add(CService("kjy2eqzk4zwi5zd3.onion", 9333), true);
+    db.Add(CService("kjy2eqzk4zwi5zd3.onion", 7382), true);
   }
   do {
     for (int i=0; seeds[i] != ""; i++) {
@@ -378,9 +378,9 @@ int main(int argc, char **argv) {
   if (opts.fUseTestNet) {
       printf("Using testnet.\n");
       pchMessageStart[0] = 0xfc;
-      pchMessageStart[1] = 0xc1;
-      pchMessageStart[2] = 0xb7;
-      pchMessageStart[3] = 0xdc;
+      pchMessageStart[1] = 0xc0;
+      pchMessageStart[2] = 0xb6;
+      pchMessageStart[3] = 0xdb;
       seeds = testnet_seeds;
       fTestNet = true;
   }
