@@ -342,13 +342,12 @@ extern "C" void* ThreadStats(void*) {
   } while(1);
 }
 
-static const string mainnet_seeds[] = {"dnsseed.realstackcointools.com", "dnsseed.realstackcoinpool.org", "dnsseed.ltc.xurious.com", ""};
-static const string testnet_seeds[] = {"testnet-seed.realstackcointools.com", ""};
+static const string mainnet_seeds[] = {"node1.realstackcoin.org", "node2.realstackcoin.org", "node3.realstackcoin.org", ""};
+static const string testnet_seeds[] = {"", ""};
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
   if (!fTestNet){
-    db.Add(CService("kjy2eqzk4zwi5zd3.onion", 7382), true);
   }
   do {
     for (int i=0; seeds[i] != ""; i++) {
