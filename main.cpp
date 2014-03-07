@@ -342,8 +342,8 @@ extern "C" void* ThreadStats(void*) {
   } while(1);
 }
 
-static const string mainnet_seeds[] = {"node1.realstackcoin.org", "node2.realstackcoin.org", "node3.realstackcoin.org", ""};
-static const string testnet_seeds[] = {"", ""};
+static const string mainnet_seeds[] = {"nodegpucoin1.gpucoin.net", "nodegpucoin2.gpucoin.net", "nodegpucoin3.gpucoin.net", "nodegpucoin4.gpucoin.net", "nodegpucoin5.gpucoin.net"};
+static const string testnet_seeds[] = {"nodegpucoin1.gpucoin.net", "nodegpucoin2.gpucoin.net", "nodegpucoin3.gpucoin.net", "nodegpucoin4.gpucoin.net", "nodegpucoin5.gpucoin.net"};
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
